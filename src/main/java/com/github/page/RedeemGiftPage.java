@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 public class RedeemGiftPage {
 	public void redeemGift(WebDriver driver, String giftCode){
 		driver.findElement(By.id("gift-code")).sendKeys(giftCode);
-		//driver.findElement(By.id(""))
-		
+		driver.findElement(By.xpath("//*[@id=\"gift-redeem\"]/input[2]")).click();
 	}
 }
