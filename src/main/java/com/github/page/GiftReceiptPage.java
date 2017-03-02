@@ -1,4 +1,4 @@
-package com.github.common.page;
+package com.github.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
