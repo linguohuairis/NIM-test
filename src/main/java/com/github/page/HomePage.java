@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 
-	public void swtichToCatalogPage(WebDriver driver){
+	public void switchToCatalogPage(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver, 200);
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Catalog")));
 		element.click();
@@ -20,7 +20,7 @@ public class HomePage {
 		element.click();
 	}
 
-	public void swtichtToSignInPage(WebDriver driver){
+	public void switchToSignInPage(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver, 200);
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Sign In")));
 		element.click();

@@ -12,7 +12,7 @@ public class CancelMemberShipPage {
         driver.findElement(By.xpath("/*[@id=\"top\"]/div/section/div/a[1]")).click();
     }
 
-    public void swtichToCancelPromoPage(WebDriver driver){
+    public void switchToCancelPromoPage(WebDriver driver){
         driver.findElement(By.id("cancel-reveal")).click();
         driver.findElement(By.xpath("/*[@id=\"cancel-survey\"]/div/ul/li[1]/label")).click();
         driver.findElement(By.id("cancel-submit")).click();

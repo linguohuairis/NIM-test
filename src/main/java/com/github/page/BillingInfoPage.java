@@ -72,7 +72,7 @@ public class BillingInfoPage {
 		return driver.findElement(By.id("nim_confirmOrderReviewPayPalMessageTxt")).getText();
 	}
 	
-	public String getconfirmOrderKeepUpdatedInputMessage(WebDriver driver){
+	public String getConfirmOrderKeepUpdatedInputMessage(WebDriver driver){
 		return driver.findElement(By.id("nim_confirmOrderKeepUpdatedInput")).getText();
 	}
 	

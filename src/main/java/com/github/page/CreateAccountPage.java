@@ -11,7 +11,7 @@ public class CreateAccountPage {
 		driver.findElement(By.id("nim_authCreateAcctSubmitBtn")).click();		
 	}
 	
-	public void swtichToSignInPage(WebDriver driver){
+	public void switchToSignInPage(WebDriver driver){
 		driver.findElement(By.id("nim_authCreateAcctSignInLink")).click();
 	}
 }

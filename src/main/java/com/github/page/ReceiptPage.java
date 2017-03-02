@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ReceiptPage {
-	public void clickTexturelogo(WebDriver driver){
+	public void clickTextureLogo(WebDriver driver){
 		driver.findElement(By.id("nim_layoutLogoImage")).click();		
 	}
 

@@ -15,7 +15,7 @@ public class SignInPage {
      public void switchToCreateAccountPage(WebDriver driver){
     	 driver.findElement(By.id("nim_authSignInCreateAccountLink")).click();    
      }
-     public void swtichToFaceBookPage(WebDriver driver){
+     public void switchToFaceBookPage(WebDriver driver){
     	 driver.findElement(By.id("nim_authSignInFaceBookLoginBtn")).click();
      }
 }
