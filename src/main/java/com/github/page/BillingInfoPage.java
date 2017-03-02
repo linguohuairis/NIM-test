@@ -8,15 +8,30 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BillingInfoPage {
-	public void enterValidCreditCard(WebDriver driver, String name, String cardNumber, String securityCode, String zipCode){
-		driver.findElement(By.id("nim_billingCCAccountNameInput")).sendKeys(name);
+	private final WebDriver driver;
+
+	public BillingInfoPage(WebDriver driver) {
+
+		this.driver = driver;
+	}
+
+	public void enterValidCreditCard(String cardNumber) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 200);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("nim_billingInfoPmtMethodTab1")));
+		element.click();
+		driver.findElement(By.id("nim_billingCCAccountNameInput")).sendKeys("name");
 		driver.findElement(By.id("nim_billingCCAccountNum")).sendKeys(cardNumber);
-		Select selectMonth = new Select(driver.findElement(By.tagName("cardExpMon")));
-		selectMonth.selectByVisibleText("Dec [12]");	
-		Select selectYear = new Select(driver.findElement(By.tagName("cardExpYr")));
-		selectYear.selectByVisibleText("2017");
-		driver.findElement(By.id("nim_billingCCCVNInput")).sendKeys(securityCode);
-		driver.findElement(By.id("nim_billingCCPostalCodeInput")).sendKeys(zipCode);
+
+		WebElement expMonthInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("nim_billingCCExpMonthInput")));
+		Select select = new Select(expMonthInput);
+		select.selectByValue("12");
+
+		WebElement expYearInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("nim_billingCCExpYearInput")));
+		Select yearSelect = new Select(expYearInput);
+		yearSelect.selectByValue("2017");
+
+		driver.findElement(By.id("nim_billingCCCVNInput")).sendKeys("777");
+		driver.findElement(By.id("nim_billingCCPostalCodeInput")).sendKeys("01001");
 		driver.findElement(By.id("nim_billingCCSubmitBtn")).click();
 	}
 
